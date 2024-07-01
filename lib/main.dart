@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jeustore/pages/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,15 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  const MaterialApp(
       title: 'Gamestore',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green,
-          title: const Text('Gamestore'),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
