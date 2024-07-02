@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jeustore/pages/home/widgets/category.dart';
 import 'package:jeustore/pages/home/widgets/header.dart';
 import 'package:jeustore/pages/home/widgets/search.dart';
 
@@ -8,33 +9,40 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Color.fromARGB(255, 63, 128, 182),
-      body: SingleChildScrollView(
-        child: Stack(
+      backgroundColor: const Color.fromARGB(255, 63, 128, 182),
+      body: ListView(
+        children: [
+          Stack(
           children: [
-            Transform(transform: Matrix4.identity()..rotateZ(20),
-            origin: Offset(150, 50),
-            child: Image.asset('assets/images/bg_liquid.png',
+            Transform(
+            transform: Matrix4.identity()..rotateZ(20),
+            origin: const Offset(150, 50),
+            child: Image.asset(
+              'assets/images/bg_liquid.png',
             width: 200,),
             ),
             Positioned(
               right: 0,
               top: 200,
             child: Transform(transform: Matrix4.identity()..rotateZ(20),
-            origin: Offset(150, 100),
-            child: Image.asset('assets/images/bg_liquid.png',
+            origin: const Offset(150, 100),
+            child: Image.asset(
+              'assets/images/bg_liquid.png',
             width: 200,),
             ),
             ),
-            Column(
+             Column(
               children: [
-                HeaderSection(),
-                ShearchSection(),
+                const HeaderSection(),
+                const ShearchSection(),
+                CategorySection(),
 
             ],)
             
           ],
+        
         ),
+        ],
       ),
       bottomNavigationBar: NavigationBar() , // appelle du navigation bar
     );
@@ -46,6 +54,7 @@ class HomePage extends StatelessWidget {
 
 
 // Bar de navigation 
+ // ignore: non_constant_identifier_names
  Widget NavigationBar() {
     return Container(
       color: const Color(0xfff6f8ff),
@@ -64,7 +73,7 @@ class HomePage extends StatelessWidget {
             topRight: Radius.circular(30),
           ),
           child: BottomNavigationBar(
-            selectedItemColor: Color.fromARGB(255, 63, 128, 182),
+            selectedItemColor: const Color.fromARGB(255, 63, 128, 182),
             selectedFontSize: 12,
             unselectedFontSize: 12,
             unselectedItemColor: const Color.fromARGB(255, 158, 158, 158).withOpacity(0.7),
