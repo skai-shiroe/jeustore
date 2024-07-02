@@ -44,7 +44,9 @@ final categories=[
         ),
       ),
       child: ListView(
-          padding: const EdgeInsets.only(bottom: 80),
+         
+          padding: EdgeInsets.only(bottom: 80),
+
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
