@@ -37,14 +37,14 @@ final categories=[
     return Container(
       height: 500,
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: Color.fromARGB(255, 248, 253, 255),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
       ),
-      child: ListView(
-          padding: const EdgeInsets.only(bottom: 80),
+       child: ListView(
+            padding: const EdgeInsets.only(bottom: 80),
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
@@ -110,7 +110,7 @@ final categories=[
           ),
           ),
           NewestGame(),
-      ]
+       ]
       ),
     );
   }
