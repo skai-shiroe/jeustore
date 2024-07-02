@@ -43,8 +43,10 @@ final categories=[
           topRight: Radius.circular(20),
         ),
       ),
-       child: ListView(
-            padding: const EdgeInsets.only(bottom: 80),
+      child: ListView(
+         
+          padding: EdgeInsets.only(bottom: 80),
+
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
