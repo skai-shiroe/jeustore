@@ -37,7 +37,7 @@ final categories=[
     return Container(
       height: 500,
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: Color.fromARGB(255, 248, 253, 255),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -112,7 +112,7 @@ final categories=[
           ),
           ),
           NewestGame(),
-      ]
+       ]
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jeustore/models/jeu.dart';
+import 'package:jeustore/pages/detail/detail.dart';
 
 class PopularGame extends StatelessWidget {
    PopularGame({super.key});
@@ -13,8 +14,12 @@ final List<Game> games=Game.games();
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => GestureDetector(
-          onTap: () => print('on tap'),
+        itemBuilder: (context, index) =>  GestureDetector(
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => DetailPage(games[index]),
+            ),
+          ),
           child: Card(
             elevation: 5,
             shape: RoundedRectangleBorder(
