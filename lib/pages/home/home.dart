@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:jeustore/pages/home/widgets/category.dart';
 import 'package:jeustore/pages/home/widgets/header.dart';
@@ -147,4 +148,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
