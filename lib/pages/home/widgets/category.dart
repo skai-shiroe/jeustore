@@ -43,8 +43,9 @@ final categories=[
           topRight: Radius.circular(20),
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
+          padding: EdgeInsets.only(bottom: 80),
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             height: 150,
