@@ -10,8 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: const Color.fromARGB(255, 63, 128, 182),
-      body: ListView(
-        children: [
+      body:
           Stack(
           children: [
             Transform(
@@ -32,18 +31,25 @@ class HomePage extends StatelessWidget {
             ),
             ),
              Column(
+               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const HeaderSection(),
                 const ShearchSection(),
-                CategorySection(),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      CategorySection()
+                    ],
+                  ),
+                )
+            ],
+             ),
 
-            ],)
-            
           ],
-        
+
         ),
-        ],
-      ),
+
+
       bottomNavigationBar: NavigationBar() , // appelle du navigation bar
     );
   }
@@ -53,7 +59,7 @@ class HomePage extends StatelessWidget {
 
 
 
-// Bar de navigation 
+// Bar de navigation
  // ignore: non_constant_identifier_names
  Widget NavigationBar() {
     return Container(
